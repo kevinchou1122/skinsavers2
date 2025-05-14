@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Comfortaa:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>SkinSavers</title>
+  </head>
+  <body class="theme-light">
+    <!-- Theme Selector -->
+    <div class="theme-selector">
+      <label for="theme-select">Theme:</label>
+      <select id="theme-select" onchange="changeTheme(this.value)">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="rainbow">Rainbow</option>
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="magenta">Magenta</option>
+        <option value="purple">Purple</option>
+        <option value="brown">Brown</option>
+      </select>
+    </div>
+
+    <!-- Loading Screen Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+      <div class="loading-content">
+        <div class="medical-icon">
+          <div class="heartbeat-line">
+            <svg viewBox="0 0 600 100" preserveAspectRatio="none">
+              <polyline class="heartbeat" points="0,50 100,50 130,30 160,70 190,50 220,50 250,50 280,30 310,70 340,50 370,50 400,50 430,30 460,70 490,50 520,50 550,50 580,50 600,50" />
+            </svg>
+          </div>
+        </div>
+        <h3 class="loading-text">Processing</h3>
+        <div class="loading-subtext" id="loading-status">Initializing...</div>
+        <div class="progress-container loading-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" id="loading-progress-bar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="logo" text-align="center"><b>skinsavers</b></h1>
+    <h5 class="text">
+      Welcome to Skinsavers! This app allows you to quickly self-diagnose
+      yourself for skin cancer, potentially saving you thousands of dollars or
+      even years of your life. All you need to do is input at least one image of
+      your skin (multiple is better). Afterward, you will know if you have skin
+      cancer or not. If you do, you will quickly receive priceless information
+      such as its type, its progression and stage (estimated), and
+      next steps, such as effective and easy treatment options and simple lifestyle changes. <b>IMPORTANT: If you do not have any damage or cancer on your skin, it may still show 5-10% cancer risk. If you are predicted to be benign (at least 90% chance - less than 5 to 10% cancer risk), you should be safe. Almost everyone will have around a 5-10% risk. There is almost always NO NEED to take significant action unless your cancer risk is above 30%.</b> Note: zoomed-out photos do not work well, microscopic photos work best (try to zoom in on your skin as much as possible)
+    </h5>
+
+    <div id="image">
+      <!-- Enhanced file upload area -->
+      <div class="file-upload-area" id="upload-area">
+        <div class="upload-icon">📷</div>
+        <div class="upload-text">Click or Drop Skin Images Here</div>
+        <div class="upload-subtext">
+          Supported formats: JPG, JPEG, PNG, GIF, WEBP
+        </div>
+        <input type="file" id="input-images" multiple accept="image/*" />
+        <div class="image-preview-container" id="preview-container"></div>
+      </div>
+
+      <!-- Body Area Selection Section -->
+      <div id="body-area-section" class="body-area-section">
+        <h3>Specify Details for Your Images</h3>
+        <p class="body-area-info">For more accurate analysis, please provide information about each image:</p>
+        <div id="body-area-container" class="body-area-container">
+          <!-- Body area selections will be added here dynamically -->
+        </div>
+      </div>
+
+      <button id="input" onclick="skinsave()">Analyze Skin Images</button>
+    </div>
+
+    <div id="output"></div>
+    <div id="groq-data" style="display: none"></div>
+    <!-- Invisible div for data transfer -->
+
+    <!-- Load required libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <!-- ONNX Runtime Web -->
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <!-- Use the exact CDN URL provided -->
+    <script src="https://cdn.jsdelivr.net/npm/groq-sdk@0.20/index.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

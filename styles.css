@@ -1,0 +1,795 @@
+/* Theme Variables */
+:root {
+  /* Light Theme (Default) */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #4caf50;
+  --accent-hover: #45a049;
+  --accent-light: #e8f5e9;
+  --accent-border: #c8e6c9;
+  --card-bg: #ffffff;
+  --card-border: #ddd;
+  --progress-bg: #e0e0e0;
+  --cancer-color: #ff5252;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Dark Theme */
+.theme-dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #66bb6a;
+  --accent-hover: #4caf50;
+  --accent-light: #1e3320;
+  --accent-border: #2e7d32;
+  --card-bg: #1e1e1e;
+  --card-border: #333;
+  --progress-bg: #333;
+  --cancer-color: #ff5252;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --overlay-bg: rgba(18, 18, 18, 0.95);
+}
+
+/* Rainbow Theme */
+.theme-rainbow {
+  --bg-color: #f8f9fa;
+  --text-color: #333333;
+  --accent-color: #ff6b6b;
+  --accent-hover: #ff8080;
+  --accent-light: #fff0f0;
+  --accent-border: #ffcccc;
+  --card-bg: #ffffff;
+  --card-border: #e0e0e0;
+  --progress-bg: #e0e0e0;
+  --cancer-color: #ff5252;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(248, 249, 250, 0.95);
+}
+
+/* Rainbow theme special elements */
+.theme-rainbow h1 {
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.theme-rainbow .loading-text,
+.theme-rainbow .subheading,
+.theme-rainbow .body-area-section h3,
+.theme-rainbow .analysis-header {
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.theme-rainbow .heartbeat {
+  stroke: url(#rainbow-gradient);
+}
+
+.theme-rainbow .progress-fill.benign {
+  background: linear-gradient(to right, #00ff00, #00ffff);
+}
+
+.theme-rainbow .progress-fill.melanoma {
+  background: linear-gradient(to right, #ff0000, #ff00ff);
+}
+
+.theme-rainbow #input {
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+}
+
+.theme-rainbow #input:hover {
+  opacity: 0.9;
+}
+
+.theme-rainbow .body-area-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Red Theme */
+.theme-red {
+  --bg-color: #fff5f5;
+  --text-color: #333333;
+  --accent-color: #e53935;
+  --accent-hover: #c62828;
+  --accent-light: #ffebee;
+  --accent-border: #ffcdd2;
+  --card-bg: #ffffff;
+  --card-border: #ffcdd2;
+  --progress-bg: #e0e0e0;
+  --cancer-color: #b71c1c;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(255, 245, 245, 0.95);
+}
+
+/* Orange Theme */
+.theme-orange {
+  --bg-color: #fff8f0;
+  --text-color: #333333;
+  --accent-color: #ff9800;
+  --accent-hover: #f57c00;
+  --accent-light: #fff3e0;
+  --accent-border: #ffe0b2;
+  --card-bg: #ffffff;
+  --card-border: #ffe0b2;
+  --progress-bg: #e0e0e0;
+  --cancer-color: #ff5252;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(255, 248, 240, 0.95);
+}
+
+/* Yellow Theme */
+.theme-yellow {
+  --bg-color: #fffde7;
+  --text-color: #333333;
+  --accent-color: #fdd835;
+  --accent-hover: #fbc02d;
+  --accent-light: #fffde7;
+  --accent-border: #fff9c4;
+  --card-bg: #ffffff;
+  --card-border: #fff9c4;
+  --progress-bg: #e0e0e0;
+  --cancer-color: #ff5252;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(255, 253, 231, 0.95);
+}
+
+/* Green Theme */
+.theme-green {
+  --bg-color: #f1f8e9;
+  --text-color: #333333;
+  --accent-color: #4caf50;
+  --accent-hover: #43a047;
+  --accent-light: #e8f5e9;
+  --accent-border: #c8e6c9;
+  --card-bg: #ffffff;
+  --card-border: #c8e6c9;
+  --progress-bg: #e0e0e0;
+  --cancer-color: #ff5252;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(241, 248, 233, 0.95);
+}
+
+/* Blue Theme */
+.theme-blue {
+  --bg-color: #e3f2fd;
+  --text-color: #333333;
+  --accent-color: #2196f3;
+  --accent-hover: #1976d2;
+  --accent-light: #e3f2fd;
+  --accent-border: #bbdefb;
+  --card-bg: #ffffff;
+  --card-border: #bbdefb;
+  --progress-bg: #e0e0e0;
+  --cancer-color: #ff5252;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(227, 242, 253, 0.95);
+}
+
+/* Magenta Theme */
+.theme-magenta {
+  --bg-color: #fce4ec;
+  --text-color: #333333;
+  --accent-color: #e91e63;
+  --accent-hover: #c2185b;
+  --accent-light: #fce4ec;
+  --accent-border: #f8bbd0;
+  --card-bg: #ffffff;
+  --card-border: #f8bbd0;
+  --progress-bg: #e0e0e0;
+  --cancer-color: #ff5252;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(252, 228, 236, 0.95);
+}
+
+/* Purple Theme */
+.theme-purple {
+  --bg-color: #f3e5f5;
+  --text-color: #333333;
+  --accent-color: #9c27b0;
+  --accent-hover: #7b1fa2;
+  --accent-light: #f3e5f5;
+  --accent-border: #e1bee7;
+  --card-bg: #ffffff;
+  --card-border: #e1bee7;
+  --progress-bg: #e0e0e0;
+  --cancer-color: #ff5252;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(243, 229, 245, 0.95);
+}
+
+/* Brown Theme */
+.theme-brown {
+  --bg-color: #efebe9;
+  --text-color: #333333;
+  --accent-color: #795548;
+  --accent-hover: #5d4037;
+  --accent-light: #efebe9;
+  --accent-border: #d7ccc8;
+  --card-bg: #ffffff;
+  --card-border: #d7ccc8;
+  --progress-bg: #e0e0e0;
+  --cancer-color: #ff5252;
+  --benign-color: #4db6ac;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-bg: rgba(239, 235, 233, 0.95);
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 48px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  display: inline-block;
+  font-size: 72px;
+  color: var(--text-color);
+}
+
+.logo {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 568;
+  font-style: normal;
+  text-align: center;
+}
+
+.text {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+#image {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Theme Selector */
+.theme-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+}
+
+.theme-selector label {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.theme-selector select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid var(--accent-border);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  font-family: "Cal Sans", sans-serif;
+}
+
+.theme-selector select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Body Area Selection Styles */
+.body-area-section {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: var(--accent-light);
+  border-radius: 10px;
+  border: 1px solid var(--accent-border);
+}
+
+.body-area-section h3 {
+  color: var(--accent-color);
+  margin-top: 0;
+  font-family: "Cal Sans", sans-serif;
+}
+
+.body-area-info {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.body-area-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.body-area-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.body-area-thumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 1px solid var(--card-border);
+}
+
+.body-area-details {
+  flex-grow: 1;
+}
+
+.body-area-filename {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-color);
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.body-area-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.body-area-select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.body-area-date {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.body-area-date:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.date-label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-color);
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+/* Loading Screen Styles */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.loading-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-content {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 20px var(--shadow-color);
+  max-width: 400px;
+  width: 90%;
+  border: 1px solid var(--accent-border);
+}
+
+.loading-text {
+  color: var(--accent-color);
+  font-size: 24px;
+  margin: 15px 0 5px;
+  font-family: "Cal Sans", sans-serif;
+}
+
+.loading-subtext {
+  color: var(--text-color);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.loading-progress {
+  margin: 20px 0;
+}
+
+.loading-progress .progress-fill {
+  background-color: var(--accent-color);
+  transition: width 0.5s ease;
+}
+
+/* Medical Icon and Heartbeat Animation */
+.medical-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  position: relative;
+}
+
+.heartbeat-line {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heartbeat {
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Enhanced file input area */
+.file-upload-area {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  border: 3px dashed var(--accent-color);
+  border-radius: 10px;
+  background-color: var(--accent-light);
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-upload-area:hover {
+  background-color: var(--accent-light);
+  border-color: var(--accent-hover);
+}
+
+.file-upload-area input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-icon {
+  font-size: 48px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.upload-text {
+  font-size: 20px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.upload-subtext {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* Image preview area */
+.image-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.image-preview {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-preview .remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--cancer-color);
+}
+
+#input {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+
+#input:hover {
+  background-color: var(--accent-hover);
+}
+
+#output {
+  margin-top: 30px;
+}
+
+.result-container {
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 45%;
+  padding: 10px;
+  border: 1px solid var(--card-border);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  background-color: var(--card-bg);
+}
+
+.result-container img {
+  width: 100%;
+  height: auto;
+}
+
+.result-container div {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.chat-output {
+  background-color: var(--accent-light);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  text-align: left;
+  color: var(--text-color);
+}
+
+.chat-output h3 {
+  color: var(--text-color);
+}
+
+.chat-output pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: var(--text-color);
+}
+
+/* Progress bar styles - updated to fill vertical space */
+.progress-container {
+  margin: 12px 0;
+  width: 100%;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.progress-bar {
+  height: 20px; /* Increased height */
+  border-radius: 6px;
+  background-color: var(--progress-bg);
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px var(--shadow-color);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+/* Different colors for different conditions */
+.melanocytic {
+  background-color: #8884d8;
+}
+.melanoma {
+  background-color: var(--cancer-color);
+}
+.dermatofib {
+  background-color: #82ca9d;
+}
+.actinic {
+  background-color: #ffc658;
+}
+.basal {
+  background-color: #ff8a65;
+}
+.benign {
+  background-color: var(--benign-color);
+}
+.vascular {
+  background-color: #7986cb;
+}
+.common {
+  background-color: #9ccc65;
+}
+
+.analysis-section {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.analysis-section h2 {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-light);
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.analysis-section ul {
+  padding-left: 20px;
+}
+
+.analysis-section li {
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.conclusion {
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: var(--accent-light);
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+.disclaimer {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-top: 20px;
+}
+
+.analysis-header {
+  color: var(--accent-color);
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+/* Subheading style without # symbols */
+.subheading {
+  color: var(--accent-color);
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .result-container {
+    width: 100%;
+  }
+  
+  body {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 48px;
+  }
+  
+  .loading-content {
+    padding: 20px;
+  }
+  
+  .body-area-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .body-area-thumbnail {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .theme-selector {
+    position: relative;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}

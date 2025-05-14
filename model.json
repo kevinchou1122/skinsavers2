@@ -1,0 +1,23 @@
+{
+  "format": "torch_script",
+  "modelTopology": {
+    "input_size": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "output_size": [
+      1,
+      8
+    ]
+  },
+  "weightsManifest": [
+    {
+      "paths": [
+        "model.pt"
+      ],
+      "weights": []
+    }
+  ]
+}
